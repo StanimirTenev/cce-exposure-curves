@@ -1,5 +1,7 @@
 # From Q-Day to Exposure Curves
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22126410.svg)](https://doi.org/10.5281/zenodo.22126410)
+
 A capability-conditioned framework for post-quantum migration under uncertain arrival.
 
 This repository holds the paper, the LaTeX source, and the single script that produces every
@@ -77,4 +79,11 @@ Paper, figures and text: CC BY 4.0. Code: MIT (see `code/LICENSE`).
 
 ## Citing
 
-See `CITATION.cff`.
+Cite the concept DOI to point at whichever revision is current:
+
+> Tenev, S. (2026). *From Q-Day to Exposure Curves: A Capability-Conditioned Framework for
+> Post-Quantum Migration Under Uncertain Arrival.* https://doi.org/10.5281/zenodo.22126410
+
+To pin this revision specifically, use the R9 DOI: https://doi.org/10.5281/zenodo.22126411
+
+Machine-readable metadata is in `CITATION.cff`.

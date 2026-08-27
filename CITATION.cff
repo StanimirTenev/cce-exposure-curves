@@ -9,6 +9,14 @@ authors:
     family-names: Tenev
     email: min.el.eng@gmail.com
     orcid: https://orcid.org/0009-0003-0106-863X
+doi: 10.5281/zenodo.22126410
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22126410
+    description: Concept DOI, resolves to the current revision
+  - type: doi
+    value: 10.5281/zenodo.22126411
+    description: Revision R9
 repository-code: https://github.com/StanimirTenev/cce-exposure-curves
 license: CC-BY-4.0
 version: R9
