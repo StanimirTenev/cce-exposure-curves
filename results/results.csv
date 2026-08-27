@@ -1,0 +1,11 @@
+scenario,policy,live,future_H_sep,benchmark_total,vs_criticality_pct,schedule
+Fast-first,Criticality-first,25.07,160.45,185.52,,Transaction signing -> Code-signing service -> Genomic exchange -> M&A data rooms -> Customer identity API -> Operational telemetry
+Fast-first,Shelf-life score,53.26,92.24,145.50,-21.6,Genomic exchange -> M&A data rooms -> Customer identity API -> Code-signing service -> Operational telemetry -> Transaction signing
+Fast-first,Live-value first,23.65,170.72,194.37,4.8,Transaction signing -> Code-signing service -> Customer identity API -> Genomic exchange -> M&A data rooms -> Operational telemetry
+Fast-first,Shortest-job first,27.55,126.43,153.98,-17.0,M&A data rooms -> Operational telemetry -> Transaction signing -> Code-signing service -> Customer identity API -> Genomic exchange
+Fast-first,Optimised,53.60,78.83,132.43,-28.6,M&A data rooms -> Genomic exchange -> Operational telemetry -> Customer identity API -> Transaction signing -> Code-signing service
+Slow-first,Criticality-first,17.12,160.45,177.57,,Transaction signing -> Code-signing service -> Genomic exchange -> M&A data rooms -> Customer identity API -> Operational telemetry
+Slow-first,Shelf-life score,29.85,92.24,122.09,-31.2,Genomic exchange -> M&A data rooms -> Customer identity API -> Code-signing service -> Operational telemetry -> Transaction signing
+Slow-first,Live-value first,19.25,170.72,189.98,7.0,Transaction signing -> Code-signing service -> Customer identity API -> Genomic exchange -> M&A data rooms -> Operational telemetry
+Slow-first,Shortest-job first,19.98,126.43,146.42,-17.5,M&A data rooms -> Operational telemetry -> Transaction signing -> Code-signing service -> Customer identity API -> Genomic exchange
+Slow-first,Optimised,32.45,77.35,109.79,-38.2,M&A data rooms -> Genomic exchange -> Operational telemetry -> Customer identity API -> Code-signing service -> Transaction signing

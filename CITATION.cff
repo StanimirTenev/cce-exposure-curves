@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: >-
+  From Q-Day to Exposure Curves: A Capability-Conditioned Framework for
+  Post-Quantum Migration Under Uncertain Arrival
+message: If you use this work, please cite it as below.
+type: software
+authors:
+  - given-names: Stanimir
+    family-names: Tenev
+    email: min.el.eng@gmail.com
+    orcid: https://orcid.org/0009-0003-0106-863X
+repository-code: https://github.com/StanimirTenev/cce-exposure-curves
+license: CC-BY-4.0
+version: R9
+date-released: '2026-08-27'
+keywords:
+  - post-quantum cryptography
+  - migration planning
+  - harvest now decrypt later
+  - cryptographic inventory

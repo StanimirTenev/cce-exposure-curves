@@ -1,0 +1,113 @@
+{
+ "systems": [
+  {
+   "name": "Transaction signing",
+   "duration": 1.5,
+   "criticality": 5,
+   "live_value": 100,
+   "hndl_rate": 1.0,
+   "shelf_life": 0.5,
+   "class": "fast"
+  },
+  {
+   "name": "Genomic exchange",
+   "duration": 3.0,
+   "criticality": 4,
+   "live_value": 25,
+   "hndl_rate": 9.0,
+   "shelf_life": 35.0,
+   "class": "any"
+  },
+  {
+   "name": "M&A data rooms",
+   "duration": 1.0,
+   "criticality": 4,
+   "live_value": 15,
+   "hndl_rate": 6.0,
+   "shelf_life": 20.0,
+   "class": "any"
+  },
+  {
+   "name": "Code-signing service",
+   "duration": 2.0,
+   "criticality": 5,
+   "live_value": 80,
+   "hndl_rate": 1.5,
+   "shelf_life": 15.0,
+   "class": "any"
+  },
+  {
+   "name": "Customer identity API",
+   "duration": 2.0,
+   "criticality": 3,
+   "live_value": 35,
+   "hndl_rate": 7.0,
+   "shelf_life": 8.0,
+   "class": "fast"
+  },
+  {
+   "name": "Operational telemetry",
+   "duration": 1.0,
+   "criticality": 2,
+   "live_value": 8,
+   "hndl_rate": 14.0,
+   "shelf_life": 1.0,
+   "class": "any"
+  }
+ ],
+ "scenarios": {
+  "Fast-first": [
+   [
+    2039.0,
+    3.4,
+    0.86
+   ],
+   [
+    2045.0,
+    3.8,
+    0.82
+   ]
+  ],
+  "Slow-first": [
+   [
+    2045.0,
+    3.8,
+    0.82
+   ],
+   [
+    2039.0,
+    3.4,
+    0.86
+   ]
+  ]
+ },
+ "grid_step_years": 0.041666666666666664,
+ "horizon": [
+  2026.0,
+  2060.0
+ ],
+ "historical_window": [
+  2021.0,
+  2026.0
+ ],
+ "migration_start": 2027.0,
+ "knapsack": {
+  "values": [
+   40,
+   30,
+   24,
+   18,
+   12,
+   8
+  ],
+  "work": [
+   40,
+   25,
+   18,
+   12,
+   8,
+   5
+  ],
+  "budget": 60
+ }
+}
