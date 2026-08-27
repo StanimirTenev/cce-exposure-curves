@@ -138,8 +138,12 @@ def figures(rows, optima):
     grid_t = [T0 + k * STEP for k in range(int((T_END - T0) / STEP) + 1)]
 
     def save(fig, name):
-        for ext in ("pdf", "png"):
-            fig.savefig(os.path.join(FIGS, f"{name}.{ext}"), bbox_inches="tight", dpi=150)
+        # A PDF carries a creation timestamp unless one is asked for explicitly, which
+        # would make every run produce byte-different figures and quietly contradict the
+        # determinism this script claims.
+        for ext, meta in (("pdf", {"CreationDate": None}), ("png", {})):
+            fig.savefig(os.path.join(FIGS, f"{name}.{ext}"),
+                        bbox_inches="tight", dpi=150, metadata=meta)
         plt.close(fig)
 
     fast, slow, F = clocks("Fast-first")

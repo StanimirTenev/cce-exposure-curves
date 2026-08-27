@@ -48,7 +48,18 @@ python3 code/analysis_model.py     # table, historical component, budget curve, 
 python3 code/verify_claims.py      # re-runs the model and checks 43 numbers against the built PDF
 ```
 
-No dependencies beyond Python and Matplotlib. No random sampling: the results are deterministic.
+No dependencies beyond Python and Matplotlib. No random sampling, and the figures carry no
+creation timestamp, so a second run leaves the working tree clean: determinism you can check with
+`git status` rather than take on trust.
+
+To rebuild the paper itself:
+
+```
+cd paper && pdflatex main.tex && pdflatex main.tex && pdflatex main.tex
+```
+
+The shipped PDF is what that produces; `pdftotext` of a fresh build and of the shipped file give
+the same text.
 
 `verify_claims.py` exists because a paper that states numbers its own script does not produce is
 the failure this framework is about. It reads the text of the built PDF and asserts that every
