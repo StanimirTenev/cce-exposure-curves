@@ -83,6 +83,58 @@ they are not the same fact.
 
 ---
 
+## A worked example
+
+One estate, answered. The point is not the figures but their shape: several of the useful
+answers are admissions, and an admission is still a number you can act on.
+
+**1.** 412 of 690 detected locations, 60%.
+
+**2.** legacy/batch, vendor/reporting, ops/telemetry — 278 locations with no entry in the
+retention schedule. The largest is vendor/reporting, a third-party system with no internal
+owner.
+
+**3.** From the criticality register inherited from the 2023 business impact analysis. Nothing
+measured.
+
+**4.** No. The same order comes out for 2035 and for 2045. That is the finding.
+
+**5.** Of the top ten, two have a stated lifetime and eight do not. Emission rate is not
+recorded anywhere, for any of them.
+
+**6.** services/genomics (30 years, research contract cl. 9) and archive/hr (50 years,
+statutory). Both exceed anything we would defend for ten.
+
+**7.** Genomics: retention cannot be shortened under the contract, so split the archive across
+two custodians. HR: the 50-year figure comes from a statute requiring retention, not
+confidentiality — re-read it before treating it as a secrecy requirement.
+
+**8.** Not estimated. First attempt: roughly four years of exports to the vendor, volume
+unknown, because egress logs roll after 90 days.
+
+**9.** 12 August 2026. Source and CI under /srv/apps and /srv/infra. Runtime, HSM contents and
+third-party systems not observed.
+
+**10.** Yes: 41 files could not be read (permissions) and 3 archives could not be opened.
+Reported separately, not counted as scanned.
+
+## Where each answer lives
+
+Each question wants a number, and most of those numbers live outside the team running the scan.
+This is usually why they go unanswered.
+
+| what | where it lives |
+| --- | --- |
+| **Confidentiality lifetimes (1, 6)** | The retention schedule, contracts and the legal register. Rarely held by the team that owns the systems, and rarely in one place. |
+| **Which systems are unclassified (2)** | The difference between the scan output and the classification. Nobody owns this join, which is why the gap is normally invisible. |
+| **Basis of the current order (3, 4)** | Whoever produced the migration plan. If the answer is a register, ask when it was last revised and against what. |
+| **Emission rate (5)** | Application logs or the data owner. Not in the cryptographic inventory, and not something a scanner can see. |
+| **What has already left (8)** | Nowhere. It is an estimate, and it is the first figure anyone will dispute — which is a reason to write it down, not to omit it. |
+| **Inventory date and scope (9)** | The tool's own manifest, if it emits one. If the scope is not stated in the artefact, it is not stated. |
+| **Unread targets (10)** | The tool vendor. If they cannot answer, that is the answer. |
+
+---
+
 ## Why the order matters more than it looks
 
 The guidance converges on ordering by criticality: NIST triages critical business processes

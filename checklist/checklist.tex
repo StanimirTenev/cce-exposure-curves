@@ -61,6 +61,30 @@
 {\small\color{black!70} Ask for the number of targets it attempted and failed to open --- permission errors, binaries with no symbols, containers it could not enter, repositories it lacked a token for. If the tool cannot answer, ``no findings'' and ``nothing vulnerable'' are the same sentence in your report, and they are not the same fact.\par}
 \ansbox
 \newpage
+\section*{A worked example}
+{\small One estate, answered. The point is not the figures but their shape: several of the useful answers are admissions, and an admission is still a number you can act on.\par}\vspace{4pt}
+\noindent\textbf{1.}\ {\small 412 of 690 detected locations, 60\%.}\par\vspace{3pt}
+\noindent\textbf{2.}\ {\small legacy/batch, vendor/reporting, ops/telemetry --- 278 locations with no entry in the retention schedule. The largest is vendor/reporting, a third-party system with no internal owner.}\par\vspace{3pt}
+\noindent\textbf{3.}\ {\small From the criticality register inherited from the 2023 business impact analysis. Nothing measured.}\par\vspace{3pt}
+\noindent\textbf{4.}\ {\small No. The same order comes out for 2035 and for 2045. That is the finding.}\par\vspace{3pt}
+\noindent\textbf{5.}\ {\small Of the top ten, two have a stated lifetime and eight do not. Emission rate is not recorded anywhere, for any of them.}\par\vspace{3pt}
+\noindent\textbf{6.}\ {\small services/genomics (30 years, research contract cl. 9) and archive/hr (50 years, statutory). Both exceed anything we would defend for ten.}\par\vspace{3pt}
+\noindent\textbf{7.}\ {\small Genomics: retention cannot be shortened under the contract, so split the archive across two custodians. HR: the 50-year figure comes from a statute requiring retention, not confidentiality --- re-read it before treating it as a secrecy requirement.}\par\vspace{3pt}
+\noindent\textbf{8.}\ {\small Not estimated. First attempt: roughly four years of exports to the vendor, volume unknown, because egress logs roll after 90 days.}\par\vspace{3pt}
+\noindent\textbf{9.}\ {\small 12 August 2026. Source and CI under /srv/apps and /srv/infra. Runtime, HSM contents and third-party systems not observed.}\par\vspace{3pt}
+\noindent\textbf{10.}\ {\small Yes: 41 files could not be read (permissions) and 3 archives could not be opened. Reported separately, not counted as scanned.}\par\vspace{3pt}
+\vspace{6pt}\section*{Where each answer lives}
+{\small Each question wants a number, and most of those numbers live outside the team running the scan. This is usually why they go unanswered.\par}\vspace{3pt}
+\begin{small}\begin{tabular}{@{}p{0.32\linewidth}p{0.64\linewidth}@{}}
+\textbf{Confidentiality lifetimes (1, 6)} & The retention schedule, contracts and the legal register. Rarely held by the team that owns the systems, and rarely in one place. \\[3pt]
+\textbf{Which systems are unclassified (2)} & The difference between the scan output and the classification. Nobody owns this join, which is why the gap is normally invisible. \\[3pt]
+\textbf{Basis of the current order (3, 4)} & Whoever produced the migration plan. If the answer is a register, ask when it was last revised and against what. \\[3pt]
+\textbf{Emission rate (5)} & Application logs or the data owner. Not in the cryptographic inventory, and not something a scanner can see. \\[3pt]
+\textbf{What has already left (8)} & Nowhere. It is an estimate, and it is the first figure anyone will dispute --- which is a reason to write it down, not to omit it. \\[3pt]
+\textbf{Inventory date and scope (9)} & The tool's own manifest, if it emits one. If the scope is not stated in the artefact, it is not stated. \\[3pt]
+\textbf{Unread targets (10)} & The tool vendor. If they cannot answer, that is the answer. \\[3pt]
+\end{tabular}\end{small}
+\newpage
 \section*{Why the order matters more than it looks}
 {\small The guidance converges on ordering by criticality: NIST triages critical business processes first, the NCSC roadmap's 2031 milestone is the ``most critical assets'', PMMP groups by risk and process. Singapore's handbook is the most careful of them --- it names IT systems with long-lived data as primary harvest-now-decrypt-later targets and asks for impact mapped against likelihood. Even there, long-lived data is a category to include among the crown jewels rather than a quantity to order by.\par}
 {\small There is a result about this. No ordering built only on a system's present criticality can minimise capability-conditioned exposure for all capability distributions, shelf lives, emission rates, durations and objective weights. It is not that criticality-first is a poor heuristic; it is that no static ranking of present properties can be optimal across the instances an organisation might actually be in, because the optimal order depends on those quantities jointly.\par}
