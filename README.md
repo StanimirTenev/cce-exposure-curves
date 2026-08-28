@@ -47,6 +47,10 @@ stated as such.
 companion to the guidance an organisation is already required to follow, covering the
 prioritisation step, where Proposition 3 applies. Each question wants a number or a name.
 
+A typeset version with space to write the answers is at
+[checklist/checklist.pdf](checklist/checklist.pdf) — two pages of form, one of rationale.
+Both are generated from one source by `python3 checklist/build.py`, so they cannot drift apart.
+
 ## Reproducing
 
 ```
