@@ -41,6 +41,12 @@ unlimited-throughput benchmark, not to realised compromise and not to the finite
 objective. The novelty claim is about the combination of ingredients in one objective, and is
 stated as such.
 
+## A checklist
+
+[CHECKLIST.md](CHECKLIST.md) — ten questions to ask before fixing a migration order. A short
+companion to the guidance an organisation is already required to follow, covering the
+prioritisation step, where Proposition 3 applies. Each question wants a number or a name.
+
 ## Reproducing
 
 ```
